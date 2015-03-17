@@ -38,7 +38,7 @@ run_analysis <- function() {
         tidy <- create_tidy_dataset(combined)
         
         # Write tidy dataset as csv in original folder
-        save_tidy_dataset(tidy, "UCI_HAR_tidy_dataset.csv", original_folder)
+        save_tidy_dataset(tidy, "UCI_HAR_tidy_dataset.txt", original_folder)
 }
 
 # Check for packages. If not install go ahead and install them
@@ -159,7 +159,8 @@ save_tidy_dataset <- function(tidy_data, tidy_file, folder) {
         # Set the location where we like to save the tidy dataset
         setwd(folder)
         
-        write.csv(tidy_data, tidy_file, row.names=FALSE)
+#        write.csv(tidy_data, tidy_file, row.names=FALSE)
+        write.table(tidy_data, tidy_file, row.names=FALSE)
         
         #Show the user where the file is located
         msg <- paste(getwd(), tidy_file, sep = "/")
