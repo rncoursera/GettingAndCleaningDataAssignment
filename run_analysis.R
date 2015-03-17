@@ -31,8 +31,7 @@ run_analysis <- function() {
         activities <- set_activities_name(data$activities)
         colnames(data$subject) <- c("subjects")
                 
-        # Combind readings, activities and subjects into one data frame 
-#        combined <- cbind(readings, activities, data$subject)        
+        # Combind readings, activities and subjects into one data frame  
         combined <- cbind(data$subject, activities, readings)  
         
         # Create tidy dataset
@@ -154,7 +153,8 @@ create_tidy_dataset <- function(data) {
         ddply(data, .(subjects, activities), function(x) colMeans(x[,3:nbOfCol]))
 }
 
-# save tidy dataset into an CSV file on
+# save tidy dataset into an CSV file on the working folder where the script
+# is running from
 save_tidy_dataset <- function(tidy_data, tidy_file, folder) {
         # Set the location where we like to save the tidy dataset
         setwd(folder)
