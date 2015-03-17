@@ -4,7 +4,7 @@ To be able to recreate the result on another system you need to performs the fol
 - Get data from Github [here](https://github.com/rncoursera/GettingAndCleaningDataAssignment)
 - Run either Rstudio or R in a terminal. Set working directory to point where run_analysis.R script is located
 - Source and run the script by calling run_analysis() in the console.
-- The ouput will be a csv file named `UCI_HAR_tidy_dataset.csv` in the same folder where run_analysis script is located.
+- The ouput will be a txt file named `UCI_HAR_tidy_dataset.txt` in the same folder where run_analysis script is located.
 
 ## List of tastks performed by the script
 The script perform the following major tasks.
@@ -17,7 +17,7 @@ The script perform the following major tasks.
 - Rename column to be more descriptive
 - Combine extracted data into a new reduced data frame 
 - Create independent tidy dataset
-- Save tidy dataset into a CSV file in your current working folder.
+- Save tidy dataset into a text file in your current working folder.
 
 ## How to run the script
 

@@ -9,7 +9,7 @@
 # 8. From the dataset in previous step, creates a second, independent tidy data 
 #    set with the average of each variable for each activity and each subject.
 # 9. Save independent tidy dataset into the folder where run_analysis() script
-#    was executed and save it as UCI_HAR_tidy_dataset.csv
+#    was executed and save it as UCI_HAR_tidy_dataset.txt
 #
 run_analysis <- function() {
         # install and check packages required
@@ -159,7 +159,6 @@ save_tidy_dataset <- function(tidy_data, tidy_file, folder) {
         # Set the location where we like to save the tidy dataset
         setwd(folder)
         
-#        write.csv(tidy_data, tidy_file, row.names=FALSE)
         write.table(tidy_data, tidy_file, row.names=FALSE)
         
         #Show the user where the file is located
