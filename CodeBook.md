@@ -1,13 +1,14 @@
 ## Introduction
-List the high level steps and output result delivered by the script to create the tidy data set.
-- Get data from Github
-- From R set working directory to point where run_analysis.R script is located
-- Source and run script by typing run_analysis()
-- Result will be generated under sub folder from your current working directiory named "./project/UCI HAR Dataset" folder named UCI_HAR_tidy_dataset.csv
+To be able to recreate the result on another system you need to performs the following tasks.
 
-## How the script works
+- Get data from Github [here](https://github.com/rncoursera/GettingAndCleaningDataAssignment)
+- Run either Rstudio or R in a terminal. Set working directory to point where run_analysis.R script is located
+- Source and run the script by calling run_analysis() in the console.
+- The ouput will be a csv file named `UCI_HAR_tidy_dataset.csv` in the same folder where run_analysis script is located.
+
+## List of tastks performed by the script
 The script perform the following major tasks.
-<pre>
+
 - check for packages needed to run the script
 - download data from the server, uncompress them and change working folder to "./project/UCI HAR Dataset"
 - Merge training and test dataset
@@ -17,14 +18,15 @@ The script perform the following major tasks.
 - Combine extracted data into a new reduced data frame 
 - Create independent tidy dataset
 - Save tidy dataset into a CSV file in your current working folder.
-</pre>
 
 ## How to run the script
-You can run the script from either Rstudio or a R terminal.
-Navigate to the folder where you cloned the repository
-Source the script
-call: run_analysis()
-Depending on your machine and network connection it may take sometime to fully execute.
+
+- You can run the script from either Rstudio or a R terminal.
+- Navigate to the folder where you cloned the repository
+- Source the script
+- call: run_analysis()
+
+Depending on your machine and network connection it may take sometime to fully execute. 
 The script will install required package if not installed.
 Then download the data from the server is not already present in the sub folder 
 and start processing uncompressed data as described in "How the script works"
@@ -103,7 +105,9 @@ Tidy dataset contains one observation per row with following columns of informat
 67. "fBodyBodyGyroJerkMag-mean()"
 68. "fBodyBodyGyroJerkMag-std()"
 </pre>
-The tidy dataset contains 180 entries, that represents 30 subjects between age of 19-46 with each 6 activities which are:
+
+The tidy dataset contains 180 entries, that represents 30 subjects between age of 19-48 with each 6 activities which are:
+
 <pre>
 1. WALKING
 2. WALKING_UPSTAIRS
@@ -112,4 +116,5 @@ The tidy dataset contains 180 entries, that represents 30 subjects between age o
 5. STANDING
 6. LAYING
 </pre>
-Each entries report x,y,z mean and standard deviation from multiple type of sensors and motions.
+
+Each entries report 66 values that represents x,y,z mean and standard deviation from multiple type of sensors and motions.
