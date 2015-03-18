@@ -1,13 +1,10 @@
 ## Content of this repository
 This repository contains coursera assignment from course `Getting And Cleaning Data`.
 
-- README.md: Provide high level information of the content on this repository
-- run_analysis.R: R script that performs all task necessary to create the tidy data set.
-- CodeBook.md: Describes steps to perform, to reproduce the same data set on any system and the tidy data set content.
-- UCI_HAR_tidy_dataset.txt: Text file containig the tidy data set as output of running run_analysis script.
-
-See ['CodeBook.md'](https://github.com/rncoursera/GettingAndCleaningDataAssignment/blob/master/CodeBook.md) for description on tidy data set.
-
+- [README.md](https://github.com/rncoursera/GettingAndCleaningDataAssignment/blob/master/README.md): Provide high level information of the content on this repository
+- [run_analysis.R](https://github.com/rncoursera/GettingAndCleaningDataAssignment/blob/master/run_analysis.R): R script that performs all task necessary to create the tidy data set.
+- [CodeBook.md](https://github.com/rncoursera/GettingAndCleaningDataAssignment/blob/master/CodeBook.md): Describes tidy data set content.
+- [UCI_HAR_tidy_dataset.txt](https://github.com/rncoursera/GettingAndCleaningDataAssignment/blob/master/UCI_HAR_tidy_dataset.txt): Text file containig the tidy data set. This is the output of run_analysis script.
 
 ## Introduction
 To be able to recreate the result on another system you need to perform the following tasks.
@@ -20,8 +17,8 @@ To be able to recreate the result on another system you need to perform the foll
 ## List of tastks performed by the script
 The script performs the following major tasks.
 
-- check for packages needed to run the script
-- download data from the server, uncompress them and change working folder to "./project/UCI HAR Dataset"
+- Check for packages needed to run the script
+- Download data from the server, uncompress them and change working folder to "./project/UCI HAR Dataset"
 - Merge training and test dataset
 - Extract mean and standard deviation for the dataset
 - Extract activities from the dataset
@@ -39,6 +36,5 @@ The script performs the following major tasks.
 - call: run_analysis()
 
 Depending on your machine and network connection it may take sometime to fully execute. 
-The script will install required package if not installed.
-Then download the data from the server is not already present in the sub folder 
-and start processing uncompressed data as described in "How the script works" 
+The script will install required packages if not installed.
+Then download the data from the server if not already present in the sub folder, uncompressed data and start processing as described in section "How the script works" 
