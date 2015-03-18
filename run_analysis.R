@@ -37,7 +37,7 @@ run_analysis <- function() {
         # Create tidy dataset
         tidy <- create_tidy_dataset(combined)
         
-        # Write tidy dataset as csv in original folder
+        # Write tidy dataset as text file in original folder
         save_tidy_dataset(tidy, "UCI_HAR_tidy_dataset.txt", original_folder)
 }
 
@@ -80,7 +80,8 @@ download_data <- function() {
 }
 
 
-# Query train and test dataset and merge them
+# Query train and test data set and merge them. 
+# Return a list containing subject, activities and mean & std readings
 merge_training_test_dataset <- function() {
         ## Read train data
         train_subjects <- read.table("./train/subject_train.txt",header=FALSE)
@@ -109,7 +110,7 @@ merge_training_test_dataset <- function() {
         readings <- rbind(train_x, test_x)
         activities <- rbind(train_y, test_y)
         
-        # merge training and test datasets. Return new merged dataset
+        # build a list with subject, activities and readings and return it
         list(readings=readings, activities=activities, subjects=subjects)
 }
 
@@ -153,7 +154,7 @@ create_tidy_dataset <- function(data) {
         ddply(data, .(subjects, activities), function(x) colMeans(x[,3:nbOfCol]))
 }
 
-# save tidy dataset into an CSV file on the working folder where the script
+# save tidy dataset into a text file on the working folder where the script
 # is running from
 save_tidy_dataset <- function(tidy_data, tidy_file, folder) {
         # Set the location where we like to save the tidy dataset
